@@ -142,8 +142,8 @@ include_directories(
 #   add_executable(${SRC_FILE_NAME} ${SRC_FILE})
 #   target_link_libraries(${SRC_FILE_NAME} ${catkin_LIBRARIES})
 # endforeach()
-add_executable(128 src/128.cpp)
-target_link_libraries(128 ${catkin_LIBRARIES})
+# add_executable(128 src/128.cpp)
+# target_link_libraries(128 ${catkin_LIBRARIES})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
