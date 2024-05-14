@@ -1,5 +1,7 @@
 
-#include "../../include/header.h"
+// #include "../../include/header.h"
+#include <dbg.h>
+#include <header.h>
 
 class Solution {
 public:
