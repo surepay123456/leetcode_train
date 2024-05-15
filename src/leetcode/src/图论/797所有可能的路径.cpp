@@ -1,24 +1,26 @@
-#include "bits/stdc++.h"
-
-#include "dbg.h"
 #include <cstddef>
+
+#include "bits/stdc++.h"
+#include "dbg.h"
+using namespace std;
 class Solution {
-public:
+   public:
     vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
         path.clear();
         results.clear();
         int target = static_cast<int>(graph.size() - 1);
-        // size_t 
+        // size_t
         backtracking(0, target, graph);
         return results;
         // size_t a;
-
     }
-private:
+
+   private:
     vector<int> path;
     vector<vector<int>> results;
-    void backtracking(int num, const int& target, const vector<vector<int>>& graph){
-        if(num == target){
+    void backtracking(int num, const int& target,
+                      const vector<vector<int>>& graph) {
+        if (num == target) {
             path.push_back(num);
             dbg(path);
             results.push_back(path);
@@ -27,7 +29,7 @@ private:
         }
         //临接矩阵遍历
         // int sizeVec = static_cast<int>(graph[num].size() - 1);
-        for(int i = 0; i <= static_cast<int>(graph[num].size()) - 1; i++){
+        for (int i = 0; i <= static_cast<int>(graph[num].size()) - 1; i++) {
             dbg(graph[num]);
             // cout << graph[num].size() << endl;
             dbg(graph[num].size());
@@ -41,11 +43,13 @@ private:
     }
 };
 
-int main(){
-    vector<vector<int>> graph = {{4,3,1},{3,2,4},{},{4},{}};
-    Solution solu;
-    vector<vector<int>> results;
-    results =  solu.allPathsSourceTarget(graph);
+int main() {
+    // vector<vector<int>> graph = {{4,3,1},{3,2,4},{},{4},{}};
+    // Solution solu;
+    // vector<vector<int>> results;
+    // results =solu.allPathsSourceTarget(graph);
+    // size_t n = 0; // uint 64
+    int n = 0;  // int 32
+    dbg(n - 1);
     return 0;
-    
 }
