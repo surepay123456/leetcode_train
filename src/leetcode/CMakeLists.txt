@@ -117,6 +117,7 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
+  include/${PROJECT_NAME}/include
   # ${PROJECT_SOURCE_DIR/include}
   # ${PROJEC}
 )
@@ -146,6 +147,9 @@ include_directories(
 # endforeach()
 # add_executable(128 src/128.cpp)
 # target_link_libraries(128 ${catkin_LIBRARIES})
+add_executable(1 src/其他/1.cpp)
+# target_include_directories(${PROJECT_SOURCE_DIR}/include)
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

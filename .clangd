@@ -6,6 +6,12 @@
   # ClangTidy:
   #   Add: modernize*
   #   Remove: modernize-use-trailing-return-type
-Diagnostics:
-  Suppress: [ "*"]
+# Diagnostics:
+  # Suppress: [-Wsign-conversion, '-Wshorten-64-to-32', Wshorten-64-to-32, '*']
+# suppress not work for some special:  -Wsign-conversion for example
+CompileFlags:
+  Add: 
+  - -Wno-sign-conversion
+  - -Wno-shorten-64-to-32
+  
 
