@@ -1,8 +1,9 @@
 #include <dbg.h>
-
-#include "../../include/header.h"
+#include <header.h>
 
 class Solution {
    public:
-    vector<vector<int>> generate(int numRows) {}
+    vector<vector<int>> generate(int numRows) {
+        //初始状态、 状态转移方程、结果
+    }
 };
