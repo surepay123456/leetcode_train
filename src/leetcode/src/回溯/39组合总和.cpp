@@ -1,48 +1,69 @@
 
+#include <exception>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+
 #include "../../include/header.h"
 
 class Solution {
-public:
+   public:
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-        sum = 0;
-        unordered_set<vector<int>> hashSet;
+        int sum = 0;
         backtracking(candidates, sum, target);
         return ans;
     }
-private:
+
+   private:
     vector<vector<int>> ans;
     vector<int> path;
-    int sum;
 
-    void backtracking(vector<int>& candidates, int sum, int target){
-        if(sum == target){
+    unordered_set<string> hashSet;
+
+    void backtracking(vector<int>& candidates, int sum, int target) {
+        if (sum == target) {
             //判断该组合是否已经在ans中
-            sort(path.begin(), path.end());
-            if(hashSet.find(path) == hashSet.end()){
-                ans.push_back(path);
-                hashSet.insert(path); 
+            vector<int> temp = path;
+            sort(temp.begin(), temp.end());
+            string strPath = vectorToString(temp);
+            if (hashSet.find(strPath) == hashSet.end()) {
+                ans.push_back(temp);
+                hashSet.insert(strPath);
                 return;
             }
         }
-        
-        if(sum > target){
+
+        if (sum > target) {
             return;
         }
 
-        for(int i = 0; i <= candidates.size() - 1; i++){
+        for (int i = 0; i <= candidates.size() - 1; i++) {
             path.push_back(candidates[i]);
             sum += candidates[i];
             backtracking(candidates, sum, target);
             path.pop_back();
-            sum -= candidates[i]; 
+            sum -= candidates[i];
         }
     }
 
-
+    string vectorToString(const vector<int>& vec) {
+        ostringstream oss;
+        for (const auto& v : vec) {
+            oss << v << ' ';
+        }
+        return oss.str();
+    }
 };
 
-int main(){
+int main() {
     vector<int> candidates{2, 3, 5};
     Solution solution;
-
+    vector<vector<int>> result = solution.combinationSum(candidates, 8);
+    for (auto& vec : result) {
+        for (auto& i : vec) {
+            cout << i;
+        }
+        cout << endl;
+    }
 }

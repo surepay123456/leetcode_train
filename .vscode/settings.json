@@ -1,0 +1,22 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "files.associations": {
+        "*.txt": "cmake",
+        "*.world": "xml",
+        "*.sdf": "xml",
+        "vector": "cpp",
+        "iomanip": "cpp",
+        "sstream": "cpp",
+        "regex": "cpp",
+        "random": "cpp"
+    },
+    "cmake.sourceDirectory": "/home/amao-desktop/leetcode/src/leetcode",
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "C_Cpp.codeAnalysis.clangTidy.useBuildPath": false,
+    "C_Cpp.codeAnalysis.clangTidy.config": "Checks: '-*,clang-analyzer-*,-Wshorten-64-to-32'"
+}

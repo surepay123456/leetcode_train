@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "-DROSCONSOLE_BACKEND_LOG4CXX",
+                "-DROS_BUILD_SHARED_LIBS=1",
+                "-DROS_PACKAGE_NAME=leetcode",
+                "-I/home/amao-desktop/leetcode/src/leetcode/include",
+                // "-I/opt/ros/noetic/include",
+                // "-I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp",
+                // "-I/home/amao-desktop/leetcode/src/leetcode/include/leetcode/include",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task by ChatGPT"
+        }
+    ]
+}

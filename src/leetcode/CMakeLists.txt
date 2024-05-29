@@ -148,6 +148,7 @@ include_directories(
 # add_executable(128 src/128.cpp)
 # target_link_libraries(128 ${catkin_LIBRARIES})
 add_executable(1 src/其他/1.cpp)
+add_executable(15 src/其他/15三数之和.cpp)
 # target_include_directories(${PROJECT_SOURCE_DIR}/include)
 
 
