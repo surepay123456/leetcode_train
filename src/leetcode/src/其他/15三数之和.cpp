@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include "../include/header.h"
+
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {

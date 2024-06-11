@@ -3,5 +3,6 @@
 build/
 devel/
 logs/
+.vscode
 .catkin_toold
 .catkin_tools
