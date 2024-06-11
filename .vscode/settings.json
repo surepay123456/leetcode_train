@@ -15,8 +15,9 @@
         "regex": "cpp",
         "random": "cpp"
     },
-    "cmake.sourceDirectory": "/home/amao-desktop/leetcode/src/leetcode",
+    "cmake.sourceDirectory": "/home/xep/leetcode/src/leetcode",
     "C_Cpp.codeAnalysis.clangTidy.enabled": true,
     "C_Cpp.codeAnalysis.clangTidy.useBuildPath": false,
-    "C_Cpp.codeAnalysis.clangTidy.config": "Checks: '-*,clang-analyzer-*,-Wshorten-64-to-32'"
+    "C_Cpp.codeAnalysis.clangTidy.config": "Checks: '-*,clang-analyzer-*,-Wshorten-64-to-32'",
+    "ros.distro": "noetic"
 }
