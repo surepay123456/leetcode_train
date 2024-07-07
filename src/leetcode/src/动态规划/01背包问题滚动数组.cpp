@@ -2,6 +2,7 @@
 
 #include <cstring>
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -22,8 +23,7 @@ int main() {
         cout << i << " " << endl;
     }
 
-    int dp[bag_weight + 1];
-    memset(dp, 0, sizeof(dp));
+    vector<int> dp(bag_weight + 1, 0);
     for (int i = 0; i < num; i++) {
         for (int j = bag_weight; j >= weights[i]; j--) {
             dp[j] = max(dp[j], dp[j - weights[i]] + costs[i]);
