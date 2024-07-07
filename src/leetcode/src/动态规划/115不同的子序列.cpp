@@ -49,4 +49,13 @@ int main(){
 m   1 0 0 0 0 0 0 
 
 
-*/
+*/#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int numDistinct(string s, string t) {
+
+    }
+};
+
